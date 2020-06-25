@@ -3,7 +3,7 @@ import os
 from joblib import load
 from flask import Flask, jsonify, request
 import tensorflow as tf
-import math
+import numpy as np
 
 
 model = tf.keras.models.load_model("./models")
@@ -17,7 +17,7 @@ data = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]]
 
 def predict():
     # data = request.json(force=True)
-    result = math.exp(model.predict(data))
+    result = np.exp(model.predict(data))
     return jsonify(result)
 
 if __name__ == '__main__':

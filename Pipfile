@@ -12,7 +12,7 @@ requests = "*"
 pandas = "*"
 tensorflow = "*"
 joblib = "*"
-math = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
